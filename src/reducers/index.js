@@ -1,23 +1,28 @@
 import {combineReducers} from 'redux'
-import {
-    INCREMENT,
-    DECREMENT,
-} from '../actions'
+import { FAILEDGETDATA, GETDATA } from '../actions'
 
+const initialState = {
+    data: [],
+    error: null
+  };
 
-const counter = (state = 0, action) => {
+const storeData = (state = initialState, action) => {
     switch (action.type) {
-        case INCREMENT:
-            return state + 1
-        case DECREMENT:
-            return state - 1
+        case GETDATA:
+            return {...state, 
+                data: [...state.data, action.payload]
+            }
+        case FAILEDGETDATA:
+            return {...state, 
+                data: [...state.data, action.payload]
+            }
         default:
             return state
     }
 }
 
 const rootReducer = combineReducers({
-    counter
+    storeData
 })
 
 export default rootReducer

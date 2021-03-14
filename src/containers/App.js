@@ -1,30 +1,27 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { increment, decrement } from "../actions";
+// import { increment, decrement } from "../actions";
 
 class App extends Component {
-  handleIncrementClick = (e) => {
-    e.preventDefault();
+  // handleIncrementClick = (e) => {
+  //   e.preventDefault();
 
-    const { dispatch } = this.props;
-    dispatch(increment());
-  };
-  handleDecrementClick = (e) => {
-    e.preventDefault();
+  //   const { dispatch } = this.props;
+  //   dispatch(increment());
+  // };
+  // handleDecrementClick = (e) => {
+  //   e.preventDefault();
 
-    const { dispatch } = this.props;
-    dispatch(decrement());
-  };
+  //   const { dispatch } = this.props;
+  //   dispatch(decrement());
+  // };
 
   render() {
+    console.log(process.env.REACT_APP_DUMMY_KEY)
     return (
       <div>
-        <div>
-          <p>Display page {this.props.counter}</p>
-          <button onClick={this.handleDecrementClick}>Decrement</button>
-          <button onClick={this.handleIncrementClick}>Increment</button>
-        </div>
+        <h1>hola</h1>
       </div>
     );
   }

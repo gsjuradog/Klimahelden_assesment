@@ -1,0 +1,11 @@
+* {
+  box-sizing: border-box;
+  color: #333;
+}
+
+body {
+  background-color: #ffffff;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+}
+
