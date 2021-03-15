@@ -5,11 +5,14 @@ import Post from '../components/Post';
 
 
 
-function PostContainer({setData, data, loading, error}) {
+function PostContainer({setData, data, loading, error, page}) {
+  
   useEffect(()=>{
-    setData()
-    if(data.length>0) console.log('props: ',data)
-  },[])
+    setData(page)
+    
+  },[page])
+
+  if (error) return <p>{error}</p>
 
   return (
     <div className="post-container">
@@ -20,7 +23,7 @@ function PostContainer({setData, data, loading, error}) {
 
 const mapDispatchToProps = dispatch => {
   return {
-    setData: ()=> dispatch(getData())
+    setData: (pageNum)=> dispatch(getData(pageNum))
   }
 };
 
@@ -30,7 +33,9 @@ const mapStateToProps = (state)=>{
   return {
    data:storeData.data, 
    error:storeData.error,
-   loading:storeData.loading
+   loading:storeData.loading,
+   page:storeData.page
+   
 
  } 
 };

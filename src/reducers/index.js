@@ -1,11 +1,20 @@
 import {combineReducers} from 'redux'
-import { FAILEDGETDATA, GETDATA, LOADINGDATA } from '../actions'
+import { 
+    FAILEDGETDATA, 
+    GETDATA, 
+    LOADINGDATA,
+    INCREMENT, 
+    DECREMENT
+} from '../actions'
 
 const initialState = {
     loading:false,
     data: [],
-    error: null
-  };
+    error: null,
+    page:0
+
+};
+
 
 const storeData = (state = initialState, action) => {
     switch (action.type) {
@@ -24,18 +33,24 @@ const storeData = (state = initialState, action) => {
         case FAILEDGETDATA:
             return {...state, 
                 loading:false,
-                error: [
-                    ...state.error,
-                     action.payload
-                    ]
+                error: action.payload
+                    
             }
+        case INCREMENT:
+            return {...state,
+                page:state.page+1} 
+        case DECREMENT:
+            return  {...state,
+                page:state.page-1} 
         default:
             return state
+
     }
 }
 
 const rootReducer = combineReducers({
     storeData
+    
 })
 
 export {rootReducer, initialState}
