@@ -21,7 +21,6 @@ export default function Post({post}) {
         {post.tags.map(tag=><span key={tag}>{tag}</span>)}
         <article>{post.text}</article>
       </section>
-
     </div>
   )
 }

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Nav from "../components/Nav";
 import PostContainer from "./PostContainer";
 
 
@@ -8,7 +9,15 @@ export default class App extends Component {
    
       return (
       <>
-        <PostContainer/>
+       
+        <Nav/>
+       
+        
+          
+        
+          <PostContainer/>
+        {/* <div className="content">
+        </div> */}
       </>
     );
   }
