@@ -131,6 +131,36 @@
 
 }
 
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 1200px) {
+  .post-card {
+    max-width: 40vw;
+    /* background-color: antiquewhite; */
+  }
 
+  .post-image-container{
+    max-height: 90vh;
+  }
+
+  .post-content{
+    width: 39vw;
+  }
+
+  .post-info{
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .post-text{
+    font-size: large;
+    margin-top: 0.8rem;
+  }
+
+  .owner-info{
+    font-size: large;
+  }
+
+  .owner-image{
+    width: 60px;
+    height: 60px;
+  }
 }

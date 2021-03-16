@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Counter from "../components/Counter";
 import Nav from "../components/Nav";
+import PageChanger from "../components/PageChanger";
 import PostContainer from "./PostContainer";
 
 
@@ -14,7 +14,7 @@ export default class App extends Component {
         <div className='content'>
           
           <PostContainer/>
-          <Counter/>
+          <PageChanger/>
           {/* <div className="content">
           </div> */}
         </div>

@@ -2,7 +2,7 @@ import React from 'react'
 import { increment, decrement } from "../actions";
 import {connect, useDispatch} from 'react-redux';
 
-function Counter({pageNumber}) {
+function PageChanger({pageNumber, loading}) {
   const dispatch = useDispatch()
   const handleIncrementClick = (e) => {
     e.preventDefault();
@@ -20,12 +20,18 @@ function Counter({pageNumber}) {
 
   const isPageZero = pageNumber===0? true: false;
 
+  if(loading) return null
+
   return (
     <div>
-    <div>
-      {pageNumber === 0? <p>You're in the first page</p>: <p>You're in page {pageNumber}</p>}
-      <button disabled={isPageZero} onClick={handleDecrementClick}>Decrement</button>
-      <button onClick={handleIncrementClick}>Increment</button>
+    <div className="page-changer-container">
+
+      {pageNumber === 0? <p>You're in the first page</p>: <p>You're in page {pageNumber + 1}</p>}
+      <div className="pageChanger-buttons">
+        <button className="change-page-button" disabled={isPageZero} onClick={handleDecrementClick}>Back</button>
+        <button className="change-page-button" onClick={handleIncrementClick}>Next</button>
+
+      </div>
     </div>
   </div>
 );
@@ -34,8 +40,9 @@ const mapStateToProps = (state) => {
   const { storeData } = state;
 
   return {
-    pageNumber:storeData.page
+    pageNumber:storeData.page,
+    loading: storeData.loading
   };
 };
 
-export default connect(mapStateToProps)(Counter);
+export default connect(mapStateToProps)(PageChanger);

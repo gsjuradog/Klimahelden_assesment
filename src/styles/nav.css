@@ -46,8 +46,19 @@
 .logo {
   align-self:auto;
   padding-top: 12px;
-  width: 140px ;
+  width: 110px ;
 }
-.logo > img {
+.logo > a> img {
   width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  
+  .nav {
+    justify-content: space-evenly;
+  }
+  
+  .logo {
+    width: 140px;
+  }
 }

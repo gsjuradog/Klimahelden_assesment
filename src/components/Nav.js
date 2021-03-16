@@ -23,7 +23,7 @@ export default function Nav() {
     <header className={scrolledNav}>
     <nav className= 'nav'>
       <div className='logo'> 
-        <img src="/Not_Posts.png" alt="Not posts Logo" />
+        <a href='/'><img src="/Not_Posts.png" alt="Not posts Logo" /></a>
       </div>
       <ul>
         <li>
