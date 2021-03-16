@@ -2,7 +2,18 @@ import React from 'react'
 import moment from 'moment';
 import '../styles/post.css'
 export default function Post({post}) {
+  
+  const addIdToTag = (arrOftags)=>{
+    let result = [];
+    for (let i=0; i < arrOftags.length; i++) {
+      result[i] = {id: i, title:arrOftags[i]}
+    }
+    return result;
+  }
 
+  const tagsWithId = addIdToTag(post.tags);
+
+  
   const altText = post.text.slice(0, post.text.length/2)+"...";
 
   const beutifyPublicationDate = moment(post.publishDate, "YYYYMMDD").fromNow()
@@ -31,7 +42,7 @@ export default function Post({post}) {
         
         <span>{beutifyPublicationDate}</span>
         <span>
-        {post.tags.map(tag=><><span key={tag}>#{tag} </span></>)}
+        {tagsWithId.map(tag=><span key={tag.id}><span >#{tag.title} </span></span>)}
 
         </span>
         

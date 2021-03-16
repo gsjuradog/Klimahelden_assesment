@@ -1,7 +1,7 @@
 /* Nav */
 
 .nav {
-  height: 70px;
+  height: 90px;
   width: 100%;
   padding:10px;
   margin: 0 auto 10px;
@@ -45,8 +45,8 @@
 
 .logo {
   align-self:auto;
-  padding-top: 11px;
-  width: 150px ;
+  padding-top: 12px;
+  width: 140px ;
 }
 .logo > img {
   width: 100%;

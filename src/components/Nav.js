@@ -27,6 +27,7 @@ export default function Nav() {
       </div>
       <ul>
         <li>
+        {/* a little bit hacky but... when clicked home will set all state to the begining settings by updating the page */}
           <a href='/'>Home</a>
         </li>
       </ul>
