@@ -26,7 +26,7 @@ export const failedAPIcall = (error) =>{
     };
 };
 
-const key = process.env.REACT_APP_DUMMY_KEY
+const key = process.env.REACT_APP_DUMMY_KEY || "60487454c1428373e71694de"
 
 export const getData =  (pageNum=0) => {
     
