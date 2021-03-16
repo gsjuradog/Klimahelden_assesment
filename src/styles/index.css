@@ -32,6 +32,6 @@ body {
 @media only screen and (min-width: 600px) {
   .post-container {
     width: 50vw;
-    background-color: lightblue;
+    
   }
 }
