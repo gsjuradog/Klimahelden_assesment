@@ -29,3 +29,41 @@ body {
   align-items: center;
 }
 
+/* PageChanger */
+
+.page-changer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pageChanger-buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.change-page-button {
+  background-color: #42bea3;
+  margin: 15px 11px 15px 0px;
+  border: none;
+  color:#ffffff;
+  padding: 14px 25px 14px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  outline: none;
+}
+
+.change-page-button:hover {
+  box-shadow: 0 10px 20px rgba(182, 182, 182, 0.75);
+  transform: translateY(-3px);
+} 
+
+
+
+@media only screen and (min-width: 600px) {
+  .post-container {
+    width: 50vw;
+    
+  }
+}

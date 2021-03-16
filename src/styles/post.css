@@ -31,6 +31,27 @@
   border-radius: 5px 5px 0 0;
 }
 
+/* Post text content */
+
+.post-content{
+  display:flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-top: 10px;
+  width: 300px;
+}
+.post-text {
+  display: flex;
+  align-items: center;
+  padding: 2.1rem;
+  text-align: justify;
+
+}
+.post-text > article > p{
+  margin: 0;
+  color: #828282;   
+}
+
 /* Post owner info */
 .owner-image {
   object-fit: cover;
@@ -42,13 +63,17 @@
 .owner-info{
   display:flex;
   justify-content:space-between;
-  width: 300px;
-  padding: 5px 18px 5px 16px;
-  max-height: 40px;
+  padding: 7px 18px 5px 16px;
+  max-height: 5vh;
 }
 .owner-info > a{
   align-self: baseline;
 }
+
+.owner-mail-icon{
+  width: 2.5vh;
+}
+
 .owner-avatarNname {
   display: flex;
   flex-direction: row;
@@ -56,7 +81,8 @@
 
 }
 .owner-avatarNname > p {
- margin-left: 5px;
+ margin-left: 10px;
+ font-weight: 700;
 
 }
 
@@ -72,21 +98,69 @@
   font-size: .5rem;
 }
 
-/* Post text content */
+@media only screen and (min-width: 600px) {
+  .post-card {
+    max-width: 50vw;
+  }
 
-.post-content{
-  display:flex;
-  justify-content: space-between;
-  flex-direction: column;
-}
-.post-text {
-  display: flex;
-  align-items: center;
-  padding: .5rem;
-  margin: 8px;
-  text-align: justify;
+  .post-image-container{
+    max-height: 70vh;
+  }
+
+  .post-content{
+    width: 48vw;
+  }
+
+  .post-info{
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .post-text{
+    font-size: xx-large;
+  }
+
+  .owner-info{
+    font-size: x-large;
+  }
+
+  .owner-image{
+    width: 60px;
+    height: 60px;
+  }
 
 }
-.post-text > article > h5{
-  margin: 0 .4rem 0 .4rem;
+
+@media only screen and (min-width: 1200px) {
+  .post-card {
+    max-width: 40vw;
+    /* background-color: antiquewhite; */
+  }
+
+  .post-image-container{
+    max-height: 90vh;
+  }
+
+  .post-content{
+    width: 39vw;
+  }
+
+  .post-info{
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .post-text{
+    font-size: large;
+    margin-top: 0.8rem;
+  }
+
+  .owner-info{
+    font-size: large;
+  }
+
+  .owner-image{
+    width: 60px;
+    height: 60px;
+  }
 }

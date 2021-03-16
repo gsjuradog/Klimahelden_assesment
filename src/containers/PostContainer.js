@@ -12,11 +12,13 @@ function PostContainer({setData, data, loading, error, page}) {
     
   },[page])
 
+  if(loading) return <h1>Loading</h1>
+
   if (error) return <p>{error}</p>
 
   return (
     <div className="post-container">
-    {data.length > 0? data[0].map(post=><Post key={post.id} post={post}></Post> ): <h1>loading</h1>}
+    {data.length > 0? data[0].map(post=><Post key={post.id} post={post}></Post> ): <h1>Loading</h1>}
     </div>
   )
 }
