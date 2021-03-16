@@ -1,41 +1,26 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
-import { connect } from "react-redux";
-import { increment, decrement } from "../actions";
+import Counter from "../components/Counter";
+import Nav from "../components/Nav";
+import PostContainer from "./PostContainer";
 
-class App extends Component {
-  handleIncrementClick = (e) => {
-    e.preventDefault();
 
-    const { dispatch } = this.props;
-    dispatch(increment());
-  };
-  handleDecrementClick = (e) => {
-    e.preventDefault();
-
-    const { dispatch } = this.props;
-    dispatch(decrement());
-  };
+export default class App extends Component {
 
   render() {
-    return (
-      <div>
-        <div>
-          <p>Display page {this.props.counter}</p>
-          <button onClick={this.handleDecrementClick}>Decrement</button>
-          <button onClick={this.handleIncrementClick}>Increment</button>
+   
+      return (
+      <>
+        <Nav/>
+        <div className='content'>
+          
+          <PostContainer/>
+          <Counter/>
+          {/* <div className="content">
+          </div> */}
         </div>
-      </div>
+      </>
     );
   }
 }
 
-const mapStateToProps = (state) => {
-  const { counter } = state;
 
-  return {
-    counter
-  };
-};
-
-export default connect(mapStateToProps)(App);

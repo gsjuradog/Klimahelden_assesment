@@ -1,0 +1,53 @@
+/* Nav */
+
+.nav {
+  height: 70px;
+  width: 100%;
+  padding:10px;
+  margin: 0 auto 10px;
+  background-color: #ffffff;
+  color: #064b54;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 5px 1px rgba(0, 0, 0, 0.082);
+}
+.scrolledNav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+}
+
+.nav ul {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  list-style:none;
+  padding-inline-start: 10px;
+}
+
+.nav ul li a {
+  margin: 5px 10px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.nav ul li:after,
+.nav ul li a:before {
+    transition: all .5s;
+}
+.nav ul li a:hover {
+  color: #3f7c6f;
+}
+
+/* Logo in nav */
+
+.logo {
+  align-self:auto;
+  padding-top: 11px;
+  width: 150px ;
+}
+.logo > img {
+  width: 100%;
+}

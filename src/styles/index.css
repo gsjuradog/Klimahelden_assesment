@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+  color: #064b54;
+}
+
+html, body, #root{
+  width: 100vw;
+}
+
+body {
+  background-color: #ffffff;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  display:flex;
+}
+.content {
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 30px ;
+}
+
+/* post related */
+
+.post-container {
+  display:flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+
