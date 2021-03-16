@@ -1,8 +1,6 @@
 import React from 'react'
-// import { getData } from '../actions';
-// import {connect } from 'react-redux';
 import moment from 'moment';
-
+import '../styles/post.css'
 export default function Post({post}) {
 
   const altText = post.text.slice(0, post.text.length/2)+"...";
@@ -11,21 +9,31 @@ export default function Post({post}) {
   console.log("date: ",beutifyPublicationDate)
   return (
     <div className="post-card">
-      <section >
+      <section className="post-image-container">
         <img className="post-image" src={post.image} alt={altText} />
       </section>
+      <div className='post-content'>
       <div className="owner-info">
-      <img className="owner-image" src={post.owner.picture} alt={`${post.owner.firstName}'s avatar`} />
+      <div className="owner-avatarNname">
+        <img className="owner-image" src={post.owner.picture} alt={`${post.owner.firstName}'s avatar`} />
         <p>{`${post.owner.firstName} ${post.owner.lastName}`}</p> 
-        <p>{post.owner.email}</p>
+      </div>
+        <p><a href={`mailto:${post.owner.email}`}><img src='/mail.png' alt="contact e-mail"/></a></p>
       </div>
       <section className='post-text'>
-        <article>{post.text}</article>
+        <article>
+          <h5>{post.text}</h5>
+        </article>
       </section>
+      </div>
       <footer className="post-info">
-        <span><img src='/heart.png' alt='likes heart' width={15} height={15}/> <p>{post.likes}</p></span>
-        <p>{beutifyPublicationDate}</p>
+        <span><img src='/heart.png' alt='likes heart' width={10} height={10}/><span>{post.likes}</span></span>
+        
+        <span>{beutifyPublicationDate}</span>
+        <span>
         {post.tags.map(tag=><><span key={tag}>#{tag} </span></>)}
+
+        </span>
         
       </footer>
     </div>

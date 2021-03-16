@@ -10,11 +10,14 @@ export default class App extends Component {
    
       return (
       <>
-        <Nav/> 
-        <PostContainer/>
-        <Counter/>
-        {/* <div className="content">
-        </div> */}
+        <Nav/>
+        <div className='content'>
+          
+          <PostContainer/>
+          <Counter/>
+          {/* <div className="content">
+          </div> */}
+        </div>
       </>
     );
   }
