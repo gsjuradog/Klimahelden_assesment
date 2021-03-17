@@ -14,7 +14,7 @@ function PostContainer({setData, data, loading, error, page}) {
 
   if(loading) return <h1>Loading</h1>
 
-  if (error) return <p>{error}</p>
+  if (error) return <p>{'Ups! sorry we had a problem'}</p>
 
   return (
     <div className="post-container">
