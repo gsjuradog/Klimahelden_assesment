@@ -17,7 +17,7 @@ export default function Post({post}) {
   const altText = post.text.slice(0, post.text.length/2)+"...";
 
   const beutifyPublicationDate = moment(post.publishDate, "YYYYMMDD").fromNow()
-  console.log("date: ",beutifyPublicationDate)
+  
   return (
     <div className="post-card">
       <section className="post-image-container">
