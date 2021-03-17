@@ -12,11 +12,8 @@ export default class App extends Component {
       <>
         <Nav/>
         <div className='content'>
-          
           <PostContainer/>
           <PageChanger/>
-          {/* <div className="content">
-          </div> */}
         </div>
       </>
     );
