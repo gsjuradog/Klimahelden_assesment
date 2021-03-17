@@ -37,7 +37,6 @@ const mapStateToProps = ({storeData})=>{
    loading:storeData.loading,
    page:storeData.page
    
-
  } 
 };
 
