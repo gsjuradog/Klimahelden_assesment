@@ -29,9 +29,8 @@ const mapDispatchToProps = dispatch => {
   }
 };
 
-const mapStateToProps = (state)=>{
-  const {storeData} = state
-  console.log('data map: ',storeData.data[0])
+const mapStateToProps = ({storeData})=>{
+  
   return {
    data:storeData.data, 
    error:storeData.error,
